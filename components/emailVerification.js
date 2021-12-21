@@ -46,7 +46,7 @@ function EmailVerification(props) {
       errors.constructor === Object
     ) {
       axios
-        .post("http://127.0.0.1:8000/resend-validation-email/", {
+        .post("http://64.227.36.240/resend-validation-email/", {
           email: email,
         })
         .then((res) => {

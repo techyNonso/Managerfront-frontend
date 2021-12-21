@@ -395,7 +395,7 @@ class Dashboard extends Component {
                 onClick={this.hideSideBar.bind(this)}
               >
                 <span>
-                  <i className="fa fa-bars"></i>
+                  <i className="uil uil-bars"></i>
                 </span>
               </button>
             </div>
@@ -519,7 +519,7 @@ class Dashboard extends Component {
                   onClick={this.showSideBar.bind(this)}
                 >
                   <span>
-                    <i className="fa fa-bars"></i>
+                    <i className="uil uil-bars"></i>
                   </span>
                 </button>
                 <strong className="pl-2">Liscence No: A98BG09DR383</strong>

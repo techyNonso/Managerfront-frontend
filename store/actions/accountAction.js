@@ -22,7 +22,7 @@ export const updateLimits = (values) => (dispatch) => {
   };
 
   axiosInstance
-    .put(`http://127.0.0.1:8000/user-update/`, data)
+    .put(`user-update/`, data)
     .then((res) => {
       dispatch({
         type: GET_USER,
@@ -51,7 +51,7 @@ export const updateDetails = (values) => (dispatch) => {
   };
 
   axiosInstance
-    .put(`http://127.0.0.1:8000/user-update/`, data)
+    .put(`user-update/`, data)
     .then((res) => {
       dispatch({
         type: GET_USER,

@@ -3,7 +3,7 @@ import axiosInstance from "Modules/axiosInstance";
 
 export const getCompanies = () => (dispatch) => {
   axiosInstance
-    .get("http://127.0.0.1:8000/companies/")
+    .get("companies/")
     .then((res) =>
       dispatch({
         type: GET_COMPANIES,
@@ -16,7 +16,7 @@ export const getCompanies = () => (dispatch) => {
 export const getCompany = (id) => (dispatch) => {
   console.log(process.env);
   axiosInstance
-    .get(`http://127.0.0.1:8000/companies/${id}/`)
+    .get(`companies/${id}/`)
     .then((res) => {
       dispatch({
         type: GET_COMPANY,
@@ -29,7 +29,7 @@ export const getCompany = (id) => (dispatch) => {
 //load companies again
 const loadCompanies = () => (dispatch) => {
   axiosInstance
-    .get("http://127.0.0.1:8000/companies/")
+    .get("companies/")
     .then((res) =>
       dispatch({
         type: GET_COMPANIES,
@@ -41,7 +41,7 @@ const loadCompanies = () => (dispatch) => {
 
 export const createCompany = (data) => (dispatch) => {
   axiosInstance
-    .post("http://127.0.0.1:8000/companies/", data)
+    .post("companies/", data)
     .then((res) => {
       loadCompanies()(dispatch);
     })

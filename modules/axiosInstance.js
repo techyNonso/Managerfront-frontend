@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import axios from "axios";
 
-const baseURL = "http://127.0.0.1:8000/";
+const baseURL = "http://64.227.36.240/";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
@@ -35,7 +35,7 @@ axiosInstance.interceptors.response.use(
 
     if (
       (error.response.status === 401 || error.response.status === 400) &&
-      originalRequest.url === `http://127.0.0.1:8000/api/token/refresh/`
+      originalRequest.url === `http://64.227.36.240/api/token/refresh/`
     ) {
       //clear app data from local storage
       localStorage.setItem("access_token", "");
@@ -50,18 +50,17 @@ axiosInstance.interceptors.response.use(
       const refreshToken = localStorage.getItem("refresh_token");
 
       return axiosInstance
-        .post(`http://127.0.0.1:8000/api/token/refresh/`, {
+        .post(`http://64.227.36.240/api/token/refresh/`, {
           refresh: refreshToken,
         })
         .then((res) => {
           if (res.status === 200) {
             localStorage.setItem("access_token", res.data.access);
             localStorage.setItem("refresh_token", res.data.refresh);
-            axiosInstance.defaults.headers.common[
-              "Authorization"
-            ] = localStorage.getItem("access_token")
-              ? "JWT " + localStorage.getItem("access_token")
-              : null;
+            axiosInstance.defaults.headers.common["Authorization"] =
+              localStorage.getItem("access_token")
+                ? "JWT " + localStorage.getItem("access_token")
+                : null;
 
             return axiosInstance(originalRequest);
           }

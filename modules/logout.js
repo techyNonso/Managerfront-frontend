@@ -14,7 +14,7 @@ export default function logout() {
       refresh: localStorage.getItem("refresh_token"),
     };
     axiosInstance
-      .post(`http://127.0.0.1:8000/logout/`, data)
+      .post(`logout/`, data)
       .then((res) => {
         localStorage.setItem("access_token", "");
         localStorage.setItem("refresh_token", "");

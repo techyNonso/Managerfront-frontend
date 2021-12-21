@@ -3,7 +3,7 @@ import axiosInstance from "Modules/axiosInstance";
 
 export const getPriceList = () => (dispatch) => {
   axiosInstance
-    .get(`http://127.0.0.1:8000/prices/`)
+    .get(`prices/`)
     .then((res) =>
       dispatch({
         type: GET_PRICE_LIST,
@@ -16,7 +16,7 @@ export const getPriceList = () => (dispatch) => {
 export const getPrice = (id) => (dispatch) => {
   //console.log(id);
   axiosInstance
-    .get(`http://127.0.0.1:8000/price/${id}/`)
+    .get(`price/${id}/`)
     .then((res) => {
       dispatch({
         type: GET_PRICE,

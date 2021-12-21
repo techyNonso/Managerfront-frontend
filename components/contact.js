@@ -75,7 +75,7 @@ class Contact extends Component {
       this.state.errors.constructor === Object
     ) {
       axios
-        .post("http://127.0.0.1:8000/contact-us/", {
+        .post("http://64.227.36.240/contact-us/", {
           email: this.state.email,
           fname: this.state.fname,
           lname: this.state.lname,

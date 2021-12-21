@@ -12,7 +12,7 @@ class WebSocketService {
   }
 
   connect(company, branch) {
-    let path = `ws://127.0.0.1:8000/ws/staff/${company}${branch}/`;
+    let path = `ws://64.227.36.240/ws/staff/${company}${branch}/`;
     this.socketRef = new WebSocket(path);
     this.socketRef.onopen = () => {
       /*this.socketNewMessage(

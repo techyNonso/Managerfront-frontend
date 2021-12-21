@@ -104,7 +104,7 @@ class Companies extends Component {
       });
 
       axiosInstance
-        .post(`http://127.0.0.1:8000/branches/`, data)
+        .post(`branches/`, data)
         .then((res) =>
           this.props.getCompanyBranches(this.props.company.companyId)
         )
@@ -157,7 +157,7 @@ class Companies extends Component {
     });
 
     axiosInstance
-      .delete(`http://127.0.0.1:8000/companies/${id}/`)
+      .delete(`companies/${id}/`)
       .then((res) => {
         this.setState({
           displayModal: false,
@@ -258,7 +258,7 @@ class Companies extends Component {
         }
 
         axiosInstance
-          .put(`http://127.0.0.1:8000/companies/${id}/`, data)
+          .put(`companies/${id}/`, data)
           .then((res) => {
             this.setState({
               displayModal: false,
@@ -322,7 +322,7 @@ class Companies extends Component {
 
     //update data base
     axiosInstance
-      .put(`http://127.0.0.1:8000/companies/payment/${id}/`, data)
+      .put(`companies/payment/${id}/`, data)
       .then((res) => {
         // get companies
         this.props.getCompanies();

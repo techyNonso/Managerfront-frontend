@@ -65,7 +65,7 @@ class Download extends Component {
     console.log(data);
 
     axiosInstance
-      .put(`http://127.0.0.1:8000/user-update/`, data)
+      .put(`http://64.227.36.240/user-update/`, data)
       .then(
         (res) => {
           let values = {
@@ -97,6 +97,7 @@ class Download extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.user.download_access);
     this.setState({
       download_access: this.props.user.download_access,
     });

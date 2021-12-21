@@ -5,7 +5,7 @@ import axiosInstance from "Modules/axiosInstance";
 export const getAllStaff = (company, branch) => (dispatch) => {
   // console.log(company);
   axiosInstance
-    .get(`http://127.0.0.1:8000/staff/company/${company}/${branch}/`)
+    .get(`staff/company/${company}/${branch}/`)
     .then((res) =>
       dispatch({
         type: GET_ALL_STAFF,
@@ -18,7 +18,7 @@ export const getAllStaff = (company, branch) => (dispatch) => {
 export const getStaff = (id) => (dispatch) => {
   //console.log(id);
   axiosInstance
-    .get(`http://127.0.0.1:8000/staff/${id}/`)
+    .get(`staff/${id}/`)
     .then((res) =>
       dispatch({
         type: GET_STAFF,

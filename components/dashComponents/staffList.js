@@ -181,7 +181,7 @@ class StaffList extends Component {
       loading: true,
     });
     axios
-      .put(`http://127.0.0.1:8000/staff/${id}/`, data)
+      .put(`http://64.227.36.240/staff/${id}/`, data)
       .then((res) => {
         //send access message
         WebSocketInstance.sendMessage({

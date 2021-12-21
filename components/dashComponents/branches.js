@@ -100,15 +100,12 @@ class Branches extends Component {
       });
 
       axiosInstance
-        .post(
-          `http://127.0.0.1:8000/branches/${this.props.company.companyId}/`,
-          data
-        )
+        .post(`branches/${this.props.company.companyId}/`, data)
         .then((res) => {
           //update company branch count
 
           axiosInstance
-            .put(`http://127.0.0.1:8000/companies/${this.props.company.id}/`, {
+            .put(`companies/${this.props.company.id}/`, {
               branches: this.props.branches.length + 1,
             })
             .then((res) => {
@@ -140,11 +137,11 @@ class Branches extends Component {
     });
 
     axiosInstance
-      .delete(`http://127.0.0.1:8000/branches/branch/${id}/`)
+      .delete(`branches/branch/${id}/`)
       .then((res) => {
         //update company with new length
         axiosInstance
-          .put(`http://127.0.0.1:8000/companies/${this.props.company.id}/`, {
+          .put(`companies/${this.props.company.id}/`, {
             branches: this.props.branches.length - 1,
           })
           .then((res) => {

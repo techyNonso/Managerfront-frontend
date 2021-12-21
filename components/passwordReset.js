@@ -70,7 +70,7 @@ function PasswordReset(props) {
       //if email we are to request link
       if (status == "email") {
         axios
-          .post("http://127.0.0.1:8000/request-reset-email/", {
+          .post("http://64.227.36.240/request-reset-email/", {
             email: email,
           })
           .then((res) => {
@@ -93,7 +93,7 @@ function PasswordReset(props) {
       } else {
         //if we are to submit new password
         axios
-          .patch("http://127.0.0.1:8000/password-reset-complete/", {
+          .patch("http://64.227.36.240/password-reset-complete/", {
             password: password,
             password2: password2,
             uidb64: uidb64,
