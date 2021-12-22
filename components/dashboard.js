@@ -13,7 +13,7 @@ import AllStock from "Components/dashComponents/allStock";
 import Attendance from "Components/dashComponents/attendance";
 import Branches from "Components/dashComponents/branches";
 import CashSales from "Components/dashComponents/cashSales";
-import CreditSales from "Components/dashComponents/creditSales";
+import CreditSales from "Components/dashComponents/creditsales";
 import Companies from "Components/dashComponents/companies";
 import Debts from "Components/dashComponents/debts";
 import OnlineSales from "Components/dashComponents/onlineSales";
