@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import "./froala/css/froala_blocks.min.css";
-import "./datepicker/style.css";
+import "./datePicker/style.css";
 import "./datePicker/picker.css";
 import "./bootstrap/dist/css/bootstrap.css";
 import "./css/new_form_template/style.css";

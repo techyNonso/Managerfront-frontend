@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import { connect } from "react-redux";
 import Pagination from "Components/dashComponents/pagination";
 import { getSales } from "Store/actions/salesAction";
-import Formatter from "Components/dashComponents/Formatter";
+import Formatter from "Components/dashComponents/formatter";
 
 import {
   extractDates,
@@ -87,9 +87,8 @@ class CashSales extends Component {
       let mainTypeSales = extractTypeSales(mainSales, "cash");
 
       //get others
-      let [total, cashs, onlines, credits, discount, balance] = getOthers(
-        mainTypeSales
-      );
+      let [total, cashs, onlines, credits, discount, balance] =
+        getOthers(mainTypeSales);
 
       //set state of activities
       this.setState({

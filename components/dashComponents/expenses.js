@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 import { connect } from "react-redux";
 import Pagination from "Components/dashComponents/pagination";
 import { getExpenses } from "Store/actions/expenseAction";
-import Formatter from "Components/dashComponents/Formatter";
+import Formatter from "Components/dashComponents/formatter";
 
 import {
   extractDates,

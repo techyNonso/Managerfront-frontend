@@ -18,14 +18,14 @@ import Companies from "Components/dashComponents/companies";
 import Debts from "Components/dashComponents/debts";
 import OnlineSales from "Components/dashComponents/onlineSales";
 import Expenses from "Components/dashComponents/expenses";
-import StaffList from "Components/dashComponents/stafflist";
+import StaffList from "Components/dashComponents/staffList";
 import ProductReport from "Components/dashComponents/productReport";
 import ExpiredStock from "Components/dashComponents/expiredStock";
 import ExhaustedStock from "Components/dashComponents/exhaustedStock";
 import StockActivities from "./dashComponents/stockActivities";
 import DashboardPage from "./dashComponents/dashboardPage";
 import Settings from "./dashComponents/settings";
-import Formatter from "Components/dashComponents/Formatter";
+import Formatter from "Components/dashComponents/formatter";
 
 import { sortCompanies } from "Modules/company";
 

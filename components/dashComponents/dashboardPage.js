@@ -6,10 +6,10 @@ import { getInvoicesPerCompany } from "Store/actions/invoicesAction";
 import { getClearancePerCompany } from "Store/actions/clearanceAction";
 import { getExpensesPerCompany } from "Store/actions/expenseAction";
 import { getDebtsPerCompany } from "Store/actions/debtsAction";
-import LineChart from "Components/dashComponents/Charts/lineChart";
-import BarChart from "Components/dashComponents/Charts/barChart";
-import MyCalendar from "Components/dashComponents/Charts/calendar";
-import Formatter from "Components/dashComponents/Formatter";
+import LineChart from "Components/dashComponents/charts/lineChart";
+import BarChart from "Components/dashComponents/charts/barChart";
+import MyCalendar from "Components/dashComponents/charts/calendar";
+import Formatter from "Components/dashComponents/formatter";
 
 import { extractDates } from "Modules/sales";
 import { extractDebts } from "Modules/debts";

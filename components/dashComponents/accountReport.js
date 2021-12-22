@@ -9,7 +9,7 @@ import { getStocks } from "Store/actions/stockAction";
 import { getClearance } from "Store/actions/clearanceAction";
 import { getExpenses } from "Store/actions/expenseAction";
 import { getDebts } from "Store/actions/debtsAction";
-import Formatter from "Components/dashComponents/Formatter";
+import Formatter from "Components/dashComponents/formatter";
 
 import { extractDates } from "Modules/sales";
 import { extractDebts } from "Modules/debts";
