@@ -131,9 +131,9 @@ export default function useForm(
             decode(res.data.access, res.data.refresh);
           })
           .catch((err) => {
-            console.log(err);
             setErrors({
-              credentials: "Invalid Credentials",
+              credentials:
+                "Invalid Credentials, please cross check your details and  ensure your email is validated .",
             });
           });
       }

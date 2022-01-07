@@ -98,6 +98,7 @@ class Contact extends Component {
           });
         })
         .catch((err) => {
+          console.log(err);
           swal({
             title: "Error",
             text: "OOPs! an error occurred, please try again later",
